@@ -17,6 +17,7 @@ class apb_can_base_test extends uvm_test;
   //APB master agent configuration of each node
   apb_master_agent_config apb_master_agent_cfg_h[];
 
+  apb_can_report_server apb_can_report_server_h;
   //-------------------------------------------------------
   // Externally defined Tasks and Functions
   //-------------------------------------------------------
@@ -47,7 +48,6 @@ endfunction : new
 //  phase - uvm phase
 //--------------------------------------------------------------------------------------------
 function void apb_can_base_test::build_phase(uvm_phase phase);
-  apb_can_report_server      apb_can_report_server_h;
   apb_can_ral_report_catcher apb_can_ral_report_catcher_h;
 
   super.build_phase(phase);

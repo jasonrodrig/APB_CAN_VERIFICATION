@@ -27,10 +27,13 @@ package apb_can_test_packages;
   // Include all other files
   //-------------------------------------------------------
   `include "define.sv"
+  `include "apb_can_report_server.sv"
   `include "apb_can_ral_report_catcher.sv"
   `include "apb_can_base_test.sv"
   `include "apb_can_reg_access_test.sv"
   `include "apb_can_loopback_test.sv"
+  `include "apb_can_register_access_test.sv"
+  `include "apb_can_invalid_address_test.sv"
 
 endpackage : apb_can_test_packages
 

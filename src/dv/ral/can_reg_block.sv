@@ -55,143 +55,143 @@ class can_reg_block extends uvm_reg_block;
     version = can_reg_version::type_id::create("version");
     version.configure(this, null, "");
     version.build();
-    default_map.add_reg(version, CAN_ADDR_VERSION, "RO");  // 0x000
+    default_map.add_reg(version, `CAN_ADDR_VERSION, "RO");  // 0x000
 
     control = can_reg_control::type_id::create("control");
     control.configure(this, null, "");
     control.build();
-    default_map.add_reg(control, CAN_ADDR_CONTROL, "RW");  // 0x004
+    default_map.add_reg(control, `CAN_ADDR_CONTROL, "RW");  // 0x004
 
     // ---- Status
     status = can_reg_status::type_id::create("status");
     status.configure(this, null, "");
     status.build();
-    default_map.add_reg(status, CAN_ADDR_STATUS, "RO");  // 0x008
+    default_map.add_reg(status, `CAN_ADDR_STATUS, "RO");  // 0x008
 
     error_status = can_reg_error_status::type_id::create("error_status");
     error_status.configure(this, null, "");
     error_status.build();
-    default_map.add_reg(error_status, CAN_ADDR_ERROR_STATUS, "RO");  // 0x00C
+    default_map.add_reg(error_status, `CAN_ADDR_ERROR_STATUS, "RO");  // 0x00C
 
     // ---- Bit timing
     brp = can_reg_brp::type_id::create("brp");
     brp.configure(this, null, "");
     brp.build();
-    default_map.add_reg(brp, CAN_ADDR_BRP, "RW");  // 0x010
+    default_map.add_reg(brp, `CAN_ADDR_BRP, "RW");  // 0x010
 
     segments = can_reg_segments::type_id::create("segments");
     segments.configure(this, null, "");
     segments.build();
-    default_map.add_reg(segments, CAN_ADDR_SEGMENTS, "RW");  // 0x014
+    default_map.add_reg(segments, `CAN_ADDR_SEGMENTS, "RW");  // 0x014
 
     sjw_control = can_reg_sjw_control::type_id::create("sjw_control");
     sjw_control.configure(this, null, "");
     sjw_control.build();
-    default_map.add_reg(sjw_control, CAN_ADDR_SJW_CONTROL, "RW");  // 0x018
+    default_map.add_reg(sjw_control, `CAN_ADDR_SJW_CONTROL, "RW");  // 0x018
 
     // ---- Transmit
     tx_id = can_reg_tx_id::type_id::create("tx_id");
     tx_id.configure(this, null, "");
     tx_id.build();
-    default_map.add_reg(tx_id, CAN_ADDR_TX_ID, "RW");  // 0x01C
+    default_map.add_reg(tx_id, `CAN_ADDR_TX_ID, "RW");  // 0x01C
 
     tx_ctrl = can_reg_tx_ctrl::type_id::create("tx_ctrl");
     tx_ctrl.configure(this, null, "");
     tx_ctrl.build();
-    default_map.add_reg(tx_ctrl, CAN_ADDR_TX_CTRL, "RW");  // 0x020
+    default_map.add_reg(tx_ctrl, `CAN_ADDR_TX_CTRL, "RW");  // 0x020
 
     tx_data_lo = can_reg_tx_data_lo::type_id::create("tx_data_lo");
     tx_data_lo.configure(this, null, "");
     tx_data_lo.build();
-    default_map.add_reg(tx_data_lo, CAN_ADDR_TX_DATA_LO, "RW");  // 0x024
+    default_map.add_reg(tx_data_lo, `CAN_ADDR_TX_DATA_LO, "RW");  // 0x024
 
     tx_data_hi = can_reg_tx_data_hi::type_id::create("tx_data_hi");
     tx_data_hi.configure(this, null, "");
     tx_data_hi.build();
-    default_map.add_reg(tx_data_hi, CAN_ADDR_TX_DATA_HI, "RW");  // 0x028
+    default_map.add_reg(tx_data_hi, `CAN_ADDR_TX_DATA_HI, "RW");  // 0x028
 
     tx_command = can_reg_tx_command::type_id::create("tx_command");
     tx_command.configure(this, null, "");
     tx_command.build();
-    default_map.add_reg(tx_command, CAN_ADDR_TX_COMMAND, "WO");  // 0x02C
+    default_map.add_reg(tx_command, `CAN_ADDR_TX_COMMAND, "WO");  // 0x02C
 
     tx_status = can_reg_tx_status::type_id::create("tx_status");
     tx_status.configure(this, null, "");
     tx_status.build();
-    default_map.add_reg(tx_status, CAN_ADDR_TX_STATUS, "RO");  // 0x030
+    default_map.add_reg(tx_status, `CAN_ADDR_TX_STATUS, "RO");  // 0x030
 
     // ---- Receive
     rx_status = can_reg_rx_status::type_id::create("rx_status");
     rx_status.configure(this, null, "");
     rx_status.build();
-    default_map.add_reg(rx_status, CAN_ADDR_RX_STATUS, "RO");  // 0x034
+    default_map.add_reg(rx_status, `CAN_ADDR_RX_STATUS, "RO");  // 0x034
 
     rx_id = can_reg_rx_id::type_id::create("rx_id");
     rx_id.configure(this, null, "");
     rx_id.build();
-    default_map.add_reg(rx_id, CAN_ADDR_RX_ID, "RO");  // 0x038
+    default_map.add_reg(rx_id, `CAN_ADDR_RX_ID, "RO");  // 0x038
 
     rx_ctrl = can_reg_rx_ctrl::type_id::create("rx_ctrl");
     rx_ctrl.configure(this, null, "");
     rx_ctrl.build();
-    default_map.add_reg(rx_ctrl, CAN_ADDR_RX_CTRL, "RO");  // 0x03C
+    default_map.add_reg(rx_ctrl, `CAN_ADDR_RX_CTRL, "RO");  // 0x03C
 
     rx_data_lo = can_reg_rx_data_lo::type_id::create("rx_data_lo");
     rx_data_lo.configure(this, null, "");
     rx_data_lo.build();
-    default_map.add_reg(rx_data_lo, CAN_ADDR_RX_DATA_LO, "RO");  // 0x040
+    default_map.add_reg(rx_data_lo, `CAN_ADDR_RX_DATA_LO, "RO");  // 0x040
 
     rx_data_hi = can_reg_rx_data_hi::type_id::create("rx_data_hi");
     rx_data_hi.configure(this, null, "");
     rx_data_hi.build();
-    default_map.add_reg(rx_data_hi, CAN_ADDR_RX_DATA_HI, "RO");  // 0x044
+    default_map.add_reg(rx_data_hi, `CAN_ADDR_RX_DATA_HI, "RO");  // 0x044
 
     rx_command = can_reg_rx_command::type_id::create("rx_command");
     rx_command.configure(this, null, "");
     rx_command.build();
-    default_map.add_reg(rx_command, CAN_ADDR_RX_COMMAND, "WO");  // 0x048
+    default_map.add_reg(rx_command, `CAN_ADDR_RX_COMMAND, "WO");  // 0x048
 
     // ---- Acceptance filter
     filter0_id = can_reg_filter0_id::type_id::create("filter0_id");
     filter0_id.configure(this, null, "");
     filter0_id.build();
-    default_map.add_reg(filter0_id, CAN_ADDR_FILTER0_ID, "RW");  // 0x04C
+    default_map.add_reg(filter0_id, `CAN_ADDR_FILTER0_ID, "RW");  // 0x04C
 
     filter0_mask = can_reg_filter0_mask::type_id::create("filter0_mask");
     filter0_mask.configure(this, null, "");
     filter0_mask.build();
-    default_map.add_reg(filter0_mask, CAN_ADDR_FILTER0_MASK, "RW");  // 0x050
+    default_map.add_reg(filter0_mask, `CAN_ADDR_FILTER0_MASK, "RW");  // 0x050
 
     filter0_ctrl = can_reg_filter0_ctrl::type_id::create("filter0_ctrl");
     filter0_ctrl.configure(this, null, "");
     filter0_ctrl.build();
-    default_map.add_reg(filter0_ctrl, CAN_ADDR_FILTER0_CTRL, "RW");  // 0x054
+    default_map.add_reg(filter0_ctrl, `CAN_ADDR_FILTER0_CTRL, "RW");  // 0x054
 
     filter1_id = can_reg_filter1_id::type_id::create("filter1_id");
     filter1_id.configure(this, null, "");
     filter1_id.build();
-    default_map.add_reg(filter1_id, CAN_ADDR_FILTER1_ID, "RW");  // 0x058
+    default_map.add_reg(filter1_id, `CAN_ADDR_FILTER1_ID, "RW");  // 0x058
 
     filter1_mask = can_reg_filter1_mask::type_id::create("filter1_mask");
     filter1_mask.configure(this, null, "");
     filter1_mask.build();
-    default_map.add_reg(filter1_mask, CAN_ADDR_FILTER1_MASK, "RW");  // 0x05C
+    default_map.add_reg(filter1_mask, `CAN_ADDR_FILTER1_MASK, "RW");  // 0x05C
 
     filter1_ctrl = can_reg_filter1_ctrl::type_id::create("filter1_ctrl");
     filter1_ctrl.configure(this, null, "");
     filter1_ctrl.build();
-    default_map.add_reg(filter1_ctrl, CAN_ADDR_FILTER1_CTRL, "RW");  // 0x060
+    default_map.add_reg(filter1_ctrl, `CAN_ADDR_FILTER1_CTRL, "RW");  // 0x060
 
     // ---- Error counters
     tec = can_reg_tec::type_id::create("tec");
     tec.configure(this, null, "");
     tec.build();
-    default_map.add_reg(tec, CAN_ADDR_TEC, "RO");  // 0x064
+    default_map.add_reg(tec, `CAN_ADDR_TEC, "RO");  // 0x064
 
     rec = can_reg_rec::type_id::create("rec");
     rec.configure(this, null, "");
     rec.build();
-    default_map.add_reg(rec, CAN_ADDR_REC, "RO");  // 0x068
+    default_map.add_reg(rec, `CAN_ADDR_REC, "RO");  // 0x068
 
     lock_model();
   endfunction

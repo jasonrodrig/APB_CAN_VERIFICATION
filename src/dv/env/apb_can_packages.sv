@@ -28,7 +28,7 @@ package apb_can_packages;
   // Include all other files
   //-------------------------------------------------------
   `include "define.sv"
-  `include "apb_can_report_server.sv"
+  `include "apb_can_reg_hdl_paths.sv"
   `include "apb_can_virtual_sequencer.sv"
   `include "apb_can_scoreboard.sv"
   `include "apb_can_subscriber.sv"

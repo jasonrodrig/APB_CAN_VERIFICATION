@@ -84,7 +84,10 @@ function void apb_can_environment::build_phase(uvm_phase phase);
     // Register model
     apb_can_reg_model_h[i] = can_reg_block::type_id::create($sformatf("apb_can_reg_model_h[%0d]", i));
     apb_can_reg_model_h[i].build();
-
+ 
+    // Backdoor HDL paths of this node's registers (RTL only; the stub has none of these blocks)
+    apb_can_reg_hdl_paths::set_hdl_paths(apb_can_reg_model_h[i], $sformatf("apb_can_top.node[%0d].dut", i));
+   
     // APB side
     apb_environment_h[i] = apb_environment::type_id::create($sformatf("apb_environment_h[%0d]", i), this);
     apb_environment_h[i].node_id = i;

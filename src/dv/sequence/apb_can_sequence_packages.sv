@@ -27,6 +27,8 @@ package apb_can_sequence_packages;
   `include "apb_can_base_sequence.sv"
   `include "apb_can_reg_access_sequence.sv"
   `include "apb_can_loopback_sequence.sv"
+  `include "apb_can_register_access_sequence.sv"
+  `include "apb_can_invalid_address_sequence.sv"
 
 endpackage : apb_can_sequence_packages
 

@@ -9,7 +9,7 @@
 //  Register accesses made on that model are converted by its map (apb_reg2bus_adapter_h) and
 //  sent to the APB master sequencer of node i, set in apb_can_environment.
 //--------------------------------------------------------------------------------------------
-class apb_can_base_sequence extends uvm_reg_sequence #(uvm_sequence #(uvm_reg_item));
+class apb_can_base_sequence extends uvm_reg_sequence;
   `uvm_object_utils(apb_can_base_sequence)
 
   `uvm_declare_p_sequencer(apb_can_virtual_sequencer)

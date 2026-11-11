@@ -28,6 +28,8 @@ package apb_can_virtual_sequence_packages;
   `include "apb_can_virtual_base_sequence.sv"
   `include "apb_can_virtual_reg_access_sequence.sv"
   `include "apb_can_virtual_loopback_sequence.sv"
+  `include "apb_can_virtual_register_access_sequence.sv"
+  `include "apb_can_virtual_invalid_address_sequence.sv"
 
 endpackage : apb_can_virtual_sequence_packages
 

@@ -14,39 +14,6 @@
 package can_reg_pkg;
   import uvm_pkg::*;
   `include "uvm_macros.svh"
-
-  localparam int unsigned CAN_REG_ADDR_WIDTH = 12;
-
-  // register byte offsets
-  localparam bit [11:0] CAN_ADDR_VERSION = 12'h000;  // RO
-  localparam bit [11:0] CAN_ADDR_CONTROL = 12'h004;  // RW
-  localparam bit [11:0] CAN_ADDR_STATUS = 12'h008;  // RO
-  localparam bit [11:0] CAN_ADDR_ERROR_STATUS = 12'h00C;  // RO
-  localparam bit [11:0] CAN_ADDR_BRP = 12'h010;  // RW
-  localparam bit [11:0] CAN_ADDR_SEGMENTS = 12'h014;  // RW
-  localparam bit [11:0] CAN_ADDR_SJW_CONTROL = 12'h018;  // RW
-  localparam bit [11:0] CAN_ADDR_TX_ID = 12'h01C;  // RW
-  localparam bit [11:0] CAN_ADDR_TX_CTRL = 12'h020;  // RW
-  localparam bit [11:0] CAN_ADDR_TX_DATA_LO = 12'h024;  // RW
-  localparam bit [11:0] CAN_ADDR_TX_DATA_HI = 12'h028;  // RW
-  localparam bit [11:0] CAN_ADDR_TX_COMMAND = 12'h02C;  // WO
-  localparam bit [11:0] CAN_ADDR_TX_STATUS = 12'h030;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_STATUS = 12'h034;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_ID = 12'h038;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_CTRL = 12'h03C;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_DATA_LO = 12'h040;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_DATA_HI = 12'h044;  // RO
-  localparam bit [11:0] CAN_ADDR_RX_COMMAND = 12'h048;  // WO
-  localparam bit [11:0] CAN_ADDR_FILTER0_ID = 12'h04C;  // RW
-  localparam bit [11:0] CAN_ADDR_FILTER0_MASK = 12'h050;  // RW
-  localparam bit [11:0] CAN_ADDR_FILTER0_CTRL = 12'h054;  // RW
-  localparam bit [11:0] CAN_ADDR_FILTER1_ID = 12'h058;  // RW
-  localparam bit [11:0] CAN_ADDR_FILTER1_MASK = 12'h05C;  // RW
-  localparam bit [11:0] CAN_ADDR_FILTER1_CTRL = 12'h060;  // RW
-  localparam bit [11:0] CAN_ADDR_TEC = 12'h064;  // RO
-  localparam bit [11:0] CAN_ADDR_REC = 12'h068;  // RO
-
-  // register classes
   `include "can_reg_version.sv"
   `include "can_reg_control.sv"
   `include "can_reg_status.sv"
@@ -74,7 +41,5 @@ package can_reg_pkg;
   `include "can_reg_filter1_ctrl.sv"
   `include "can_reg_tec.sv"
   `include "can_reg_rec.sv"
-
-  // register block (uses the offset constants above)
   `include "can_reg_block.sv"
 endpackage
